@@ -1,0 +1,15 @@
+{
+    "name": "projectarmy/validator",
+    "description": "Email validation API",
+    "type": "prject",
+    "require": {
+        "daveearley/daves-email-validation-tool": "^0.1.15"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Lankmiler",
+            "email": "pavel@incorporatenow.com"
+        }
+    ]
+}
