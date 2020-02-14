@@ -32,6 +32,10 @@ class Validator {
      */
     function beforeCall()
     {
+        print_r($this->auth_code);
+        print_r(self::$valid_auth_code);
+        die();
+
         if(!in_array(parse_url($_SERVER['HTTP_REFERER']), $this->valid_domains) || $this->auth_code != self::$valid_auth_code) {
             header('HTTP/1.0 403 Forbidden');
             exit();
