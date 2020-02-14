@@ -3,6 +3,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php?/$1 [L]
 
-Header set Access-Control-Allow-Origin "http(s)?://(www\.)?(my.projectarmy.net|dev.projectarmy.net)$"
+
+SetEnvIf Origin "http(s)?://(www\.)?(dev.projectarmy.net|my.projectarmy.net)$" AccessControlAllowOrigin=$0
 Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
 Header merge Vary Origin
