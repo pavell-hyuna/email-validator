@@ -21,6 +21,7 @@ class Validator {
      * invalid domains or auth code
      */
     public function __call($method, $arguments) {
+        die();
         if(method_exists($this, $method)) {
             $this->beforeCall();
             return call_user_func_array(array($this,$method),$arguments);
