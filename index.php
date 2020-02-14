@@ -3,6 +3,9 @@
 require_once 'validator.php';
 
 if(isset($_GET['key']) && isset($_GET['email'])) {
+    echo '<pre>';
+    print_r($_SERVER);
+    die();
     $validator = new Validator($_GET['key']);
     $validator->validate($_GET['email']);
 } else {
