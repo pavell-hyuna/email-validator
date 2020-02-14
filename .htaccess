@@ -3,4 +3,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php?/$1 [L]
 
-Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Origin "my.projectarmy.net"
+Header set Access-Control-Allow-Origin "dev.projectarmy.net"
